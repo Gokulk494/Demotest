@@ -1,4 +1,4 @@
-function register() {
+function index() {
     var firstName = document.getElementById('firstName').value;
     var lastName = document.getElementById('lastName').value;
     var email = document.getElementById('email').value;
