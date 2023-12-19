@@ -1,0 +1,71 @@
+/* Global styles */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background: #e7e7de;
+    font-family: "Titillium Web", sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.container {
+    width: 100%;
+    margin: auto;
+    padding: 20px;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.form {
+    background: rgb(255, 255, 0);
+    padding: 40px;
+    max-width: 600px;
+    border-radius: 4px;
+    box-shadow: 0 4px 10px 4px rgb(0, 255, 255);
+    text-align: center;
+}
+
+.top-row {
+    display: flex;
+    justify-content: space-between;
+}
+
+.field-wrap,
+.button {
+    width: 48%;
+}
+
+.button {
+    cursor: pointer;
+    border: 0;
+    outline: none;
+    border-radius: 0;
+    padding: 5px 0;
+    font-size: 1rem;
+    font-weight: 300;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    background: #4caf50; /* Green color */
+    color: #fff;
+    transition: all 0.5s ease;
+    margin-top: 10px;
+}
+
+.button:hover,
+.button:focus {
+    background: #45a049; /* Darker green on hover/focus */
+}
+
+/* Styles for validation message */
+.error-message {
+    color: #ff69b4; /* Pink color for error message */
+}
