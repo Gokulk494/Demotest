@@ -1,30 +1,47 @@
-package eight.controller;
+package eight.model;
 
-import eight.model.User;
-import eight.repository.UserRepository;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Controller;
-import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PostMapping;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
 
-@Controller
-public class UserController {
+@Entity
+public class User {
 
-    @Autowired
-    private UserRepository userRepository;
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long id;
+    private String username;
+    private String password;
 
-    @GetMapping("/index")
-    public String showRegistrationForm(Model model) {
-        model.addAttribute("user", new User());
-        return "index";
+    // Constructors, getters, and setters
+
+    public User() {
     }
 
-    @PostMapping("/index")
-    public String processRegistration(User user) {
-        userRepository.save(user);
-        // Redirect to login page after registration
-        return "redirect:/login";
+    public Long getId() {
+        return id;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
+    }
+
+    public String getUsername() {
+        return username;
+    }
+
+    public void setUsername(String username) {
+        this.username = username;
+    }
+
+    public String getPassword() {
+        return password;
+    }
+
+    public void setPassword(String password) {
+        this.password = password;
     }
 }
+
 
