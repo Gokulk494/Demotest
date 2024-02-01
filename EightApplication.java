@@ -9,4 +9,3 @@ public class EightApplication {
         SpringApplication.run(EightApplication.class, args);
     }
 }
-
