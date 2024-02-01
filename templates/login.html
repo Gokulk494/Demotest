@@ -1,0 +1,36 @@
+<!-- src/main/resources/templates/login.html -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Login</title>
+    <link rel="stylesheet" type="text/css" href="login.css">
+</head>
+<body>
+
+    <div class="login-container">
+        <div class="login-heading">
+            <h2>Login</h2>
+        </div>
+
+        <!-- Login form -->
+        <form id="loginForm">
+            <label for="gmail">Gmail:</label>
+            <input type="text" id="gmail" name="gmail" required autofocus/>
+
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" required/>
+
+            <button type="button" onclick="performLogin()">Login</button>
+        </form>
+
+        <p>Don't have an account? <a href="/register">Register here</a></p>
+        <p><a href="/forgot-password">Forgot Password?</a></p>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
+    <script src="login.js"></script>
+
+</body>
+</html>
