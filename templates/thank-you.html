@@ -1,0 +1,26 @@
+<!-- src/main/resources/templates/thank-you.html -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Your head content here -->
+    <title>Thank You</title>
+</head>
+<body>
+
+    <h2>Thank You for Registering!</h2>
+
+    <!-- Fragment with id "thankYouContent" -->
+    <div th:fragment="thankYouContent">
+        <!-- Your thank-you content here -->
+        
+        <p>Have a good day</p>
+        
+        <!-- Add a login button with a link to the login page -->
+        <a href="/login">
+            <button>Login</button>
+        </a>
+    </div>
+
+</body>
+</html>
