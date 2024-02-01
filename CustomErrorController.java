@@ -1,6 +1,7 @@
 package eight.error;
 
 import org.springframework.boot.web.servlet.error.ErrorController;
+import org.springframework.http.HttpStatus;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -18,9 +19,9 @@ public class CustomErrorController implements ErrorController {
         if (status != null) {
             Integer statusCode = Integer.valueOf(status.toString());
 
-            if (statusCode == 404) {
+            if (statusCode == HttpStatus.NOT_FOUND.value()) {
                 model.addAttribute("error", "404 - Not Found");
-            } else if (statusCode == 500) {
+            } else if (statusCode == HttpStatus.INTERNAL_SERVER_ERROR.value()) {
                 model.addAttribute("error", "500 - Internal Server Error");
             }
         }
@@ -32,4 +33,3 @@ public class CustomErrorController implements ErrorController {
         return "/error";
     }
 }
-
