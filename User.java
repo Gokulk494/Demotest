@@ -11,13 +11,18 @@ public class User {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
+
     private String username;
     private String password;
+    private String gmail;
+    private String dob;
+    private String Interest;
+    private String Domain;
 
-    // Constructors, getters, and setters
+	private String address;
+   
 
-    public User() {
-    }
+    // Getters and setters
 
     public Long getId() {
         return id;
@@ -42,4 +47,45 @@ public class User {
     public void setPassword(String password) {
         this.password = password;
     }
-}
+
+    public String getGmail() {
+        return gmail;
+    }
+
+    public void setGmail(String gmail) {
+        this.gmail = gmail;
+    }
+    public  String getdob()
+    {
+    	return dob;
+    }
+    public void setdob(String Date_of_Birth)
+    {
+    	this.dob=Date_of_Birth;
+    }
+    public  String getaddress()
+    {
+    	return address;
+    }
+    public void setaddress(String Address)
+    {
+    	this.address=Address;
+    }
+    public  String getInterest()
+    {
+    	return Interest;
+    }
+    public void setInterest(String Interest)
+    {
+    	this.Interest=Interest;
+    }
+    	public  String getDomain()
+        {
+        	return Domain;
+        }
+        public void setDomain(String Domain)
+        {
+        	this.Domain=Domain;
+        }
+    }
+
