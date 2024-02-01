@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Profile</title>
+    <link rel="stylesheet" type="text/css" href="profile.css">
+</head>
+<body>
+
+    <div class="profile-container">
+        <div class="profile-heading">
+            <h2>User Profile</h2>
+        </div>
+
+        <!-- Profile details -->
+        <div class="profile-details">
+            <label for="username">Username:</label>
+            <div class="details-field" th:text="${user.username}"></div>
+
+            <label for="gmail">Gmail:</label>
+            <div class="details-field" th:text="${user.gmail}"></div>
+
+            <!-- Add more fields as needed -->
+        </div>
+
+        <a href="/edit-profile">
+            <button>Edit Profile</button>
+        </a>
+    </div>
+
+</body>
+</html>
