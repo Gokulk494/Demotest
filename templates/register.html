@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>User Registration</title>
+    <link rel="stylesheet" type="text/css" href="register.css">
+</head>
+<body>
+
+    <div class="registration-container">
+        <div class="registration-heading">
+            <h2>User Registration</h2>
+        </div>
+
+        <!-- Registration form -->
+        <form action="/register" method="post">
+            <label for="username">Username:</label>
+            <input type="text" id="username" name="username" required autofocus/>
+            
+            <label for="gmail">Gmail:</label>
+            <input type="text" id="gmail" name="gmail" required autofocus/>
+
+            <label for="dob">Date of Birth:</label>
+            <input type="text" id="dob" name="dob" required autofocus/>
+
+            <label for="address">Address:</label>
+            <input type="text" id="address" name="address" required autofocus/>
+
+            <label for="domain">Domain:</label>
+            <input type="text" id="domain" name="domain" required autofocus/>
+
+            <label for="interest">Interest:</label>
+            <input type="text" id="interest" name="interest" required autofocus/>
+
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" required/>
+
+            <button type="submit">Register</button>
+        </form>
+
+        <p>Already registered? <a href="/login">Login here</a></p>
+    </div>
+
+</body>
+</html>
