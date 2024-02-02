@@ -26,7 +26,7 @@ public class CustomErrorController implements ErrorController {
             }
         }
 
-        return "error";
+        return "error"; // Assuming you have an error.html template
     }
 
     public String getErrorPath() {
